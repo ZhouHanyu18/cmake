@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../tools/math.h"
+#include "config.h"
+
+#ifdef USE_MYMATH
+#include "tools/math.h"
+#else
+#include <math.h>
+#endif
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
