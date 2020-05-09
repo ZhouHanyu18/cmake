@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "../tools/math.h"
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -9,7 +9,8 @@ int main(int argc, char* argv[]) {
     }
     
     double input = atof(argv[1]);
-    double out = sqrt(input);
+    int n = atoi(argv[2]);
+    double out = pow(input, n);
     
-    printf("%f sqrt is %f\n", input, out); 
+    printf("pow(%f, %d) is %f\n", input, n, out); 
 }
